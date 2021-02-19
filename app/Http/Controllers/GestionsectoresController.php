@@ -61,4 +61,15 @@ class GestionsectoresController extends Controller
 
         return redirect()->route('view_gestion');
     }
+
+    public function desactivate($id){
+
+        DB::select("UPDATE sector SET activo = 0 WHERE sector_id = $id");
+        return redirect()->route('view_gestion');
+    }
+    public function activate($id){
+
+        DB::select("UPDATE sector SET activo = 1 WHERE sector_id = $id");
+        return redirect()->route('view_gestion');
+    }
 }

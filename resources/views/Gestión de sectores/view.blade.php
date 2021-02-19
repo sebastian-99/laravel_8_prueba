@@ -53,10 +53,16 @@
                             <center>
                             <a href="{{route('update_gestion_sectores',['id'=>$s->sector_id])}}">
                                 <button type="button" class="btn btn-warning">Modificar</button>
-                            </a>                                
-                            <a href="#">
+                            </a>
+                            @if($s->activo == 1)                                
+                            <a href="{{route('desactivate_gestion_sectores',['id'=>$s->sector_id])}}">
                                 <button type="button" class="btn btn-info">Desactivar</button>
-                            </a>    
+                            </a>
+                            @elseif($s->activo == 0)
+                            <a href="{{route('activate_gestion_sectores',['id'=>$s->sector_id])}}">
+                                <button type="button" class="btn btn-info">Activar</button>
+                            </a>
+                            @endif   
                             </center>
                         </td>
                         
