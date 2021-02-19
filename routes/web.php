@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::get("gestion_sectores",[GestionsectoresController::class,"view"])->name('view_gestion');
 Route::get("gestion_sectores_crear",[GestionsectoresController::class,"create"])->name('create_gestion_sectores');
+Route::get("gestion_sectores_modificar/{id}",[GestionsectoresController::class,"update"])->name('update_gestion_sectores');
 Route::POST("gestion_sectores_guardar",[GestionsectoresController::class,"store"])->name('store_gestion_sectores');
+Route::POST("gestion_sectores_actualizar",[GestionsectoresController::class,"upload"])->name('upload_gestion_sectores');

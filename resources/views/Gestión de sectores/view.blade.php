@@ -41,16 +41,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($search as $s)
                     <tr>
                         <td>
                             <center>
-                                <h4>Sector cental</h4>
+                                <h4>{{$s->nombre}}</h4>
                             </center>
                         </td>
                         
                         <td>
                             <center>
-                            <a href="#">
+                            <a href="{{route('update_gestion_sectores',['id'=>$s->sector_id])}}">
                                 <button type="button" class="btn btn-warning">Modificar</button>
                             </a>                                
                             <a href="#">
@@ -60,25 +61,7 @@
                         </td>
                         
                     </tr>
-                    <tr>
-                        <td>
-                            <center>
-                                <h4>Sector auxiliar</h4>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                            <a href="#">
-                                <button type="button" class="btn btn-warning">Modificar</button>
-                            </a>
-                            <a href="#">
-                                <button type="button" class="btn btn-info">Desactivar</button>
-                            </a>
-                            </center>
-                        </td>
-                        
-                    </tr>
-                    
+                    @endforeach
                 </tbody>
             </table>
         </div>
