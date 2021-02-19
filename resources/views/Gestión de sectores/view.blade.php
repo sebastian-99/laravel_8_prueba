@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="col-sm-2">
-                    <a href="#">
+                    <a href="{{route("create_gestion_sectores")}}">
                         <button type="button" class="btn btn-primary">Nuevo</button>
                     </a>
                 </div>
